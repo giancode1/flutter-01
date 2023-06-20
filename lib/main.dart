@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 //ctrl .  en MyApp, Text
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      //Text es un widget
-      home: Center(child: Text('Hola Mundo GC')),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(child: Text('Hola Mundo GC')), //Text es un widget
+      )
     );
   }
 
